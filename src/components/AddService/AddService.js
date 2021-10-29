@@ -3,17 +3,17 @@ import { useForm } from 'react-hook-form';
 
 const AddService = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        console.log(data);
+    };
     
     return (
         <div>
             <h2>Add a New Service</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-            {/* register your input into the hook by invoking the "register" function */}
-            <input defaultValue="test" {...register("title")} />
-            
-            {/* include validation with required or other standard HTML validation rules */}
-            <input {...register("exampleRequired", { required: true })} />
+            <input placeholder="Enter Title" {...register("title", { required: true })} /> <br />
+            <input placeholder="Enter Description" {...register("description")} /> <br />
+            <input placeholder="Enter Price" {...register("price", { required: true })} /> <br />
             {/* errors will return when field validation fails  */}
             {errors.exampleRequired && <span>This field is required</span>}
             

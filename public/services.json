@@ -1,0 +1,50 @@
+[
+{
+	"name" : "Single Tour",
+	"vanue" : "Kuakata",
+	"duration" : "2 days",
+	"description" : "This is great place for you, you can tour with us for gather a best exprience. we provide a cheap rates for tour",
+	"price" : 299,
+	"img" : "https://www.bdstall.com/asset/product-image/giant_19022.jpg"
+},
+{
+	"name" : "Couple Tour",
+	"vanue" : "Kuakata",
+	"duration" : "2 days",
+	"description" : "This is great place for you, you can tour with us for gather a best exprience. we provide a cheap rates for tour",
+	"price" : 599,
+	"img" : "https://static-01.daraz.com.bd/p/2d437699517d45811b55233eb44c8311.jpg"
+},
+{
+	"name" : "Family Tour",
+	"vanue" : "Kuakata",
+	"duration" : "2 days",
+	"description" : "This is great place for you, you can tour with us for gather a best exprience. we provide a cheap rates for tour",
+	"price" : 999,
+	"img" : "https://2.bp.blogspot.com/-kzBpgCzrHkQ/VrsUyOkblZI/AAAAAAAAGY8/d2LSQ51chE0/s1600/honeymoon-destinations.jpg"
+},
+{
+	"name" : "Platinum single tour",
+	"vanue" : "Kuakata",
+	"duration" : "3 days",
+	"description" : "This is great place for you, you can tour with us for gather a best exprience. we provide a cheap rates for tour",
+	"price" : 599,
+	"img" : "https://www.ontaheen.com/wp-content/uploads/2017/05/Kuakata-Buddhist-Temple.jpg"
+},
+{
+	"name" : "Platinum Couple tour",
+	"vanue" : "Kuakata",
+	"duration" : "3 days",
+	"description" : "This is great place for you, you can tour with us for gather a best exprience. we provide a cheap rates for tour",
+	"price" : 999,
+	"img" : "https://www.bdbooking.com/upload/property/hotel/110420201229446965fa30128643ed.jpg"
+},
+{
+	"name" : "Platinum Family tour",
+	"vanue" : "Kuakata",
+	"duration" : "3 days",
+	"description" : "This is great place for you, you can tour with us for gather a best exprience. we provide a cheap rates for tour",
+	"price" : 1299,
+	"img" : "https://3.bp.blogspot.com/-dX4HcUuS70g/V9baV_7_uRI/AAAAAAAACZg/7dTE0u8hO00n5HGhSaRkApspARXQxYP-QCLcB/s1600/Ilish%2BCafe%252C%2BIlish%2BPark%252C%2BKuakata.jpg"
+}
+]

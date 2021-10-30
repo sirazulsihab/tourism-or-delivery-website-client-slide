@@ -21,8 +21,8 @@ const Home = () => {
                 alt="First slide"
                 />
                 <Carousel.Caption>
-                <h5>First slide label</h5>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <h5>Kuakata sea beach</h5>
+                <p>Best place for tour. don't mistake to enjoy</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -32,8 +32,8 @@ const Home = () => {
                 alt="Second slide"
                 />
                 <Carousel.Caption>
-                <h5>Second slide label</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h5>Kuakata sea beach</h5>
+                <p>Best place for tour. don't mistake to enjoy</p>
                 </Carousel.Caption>
             </Carousel.Item>
 
@@ -44,8 +44,8 @@ const Home = () => {
                 alt="Second slide"
                 />
                 <Carousel.Caption>
-                <h5>Second slide label</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h5>Kuakata sea beach</h5>
+                <p>Best place for tour. don't mistake to enjoy</p>
                 </Carousel.Caption>
             </Carousel.Item>
             

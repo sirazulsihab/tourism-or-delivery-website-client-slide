@@ -4,10 +4,11 @@ import { Carousel, Row } from 'react-bootstrap';
 import Services from '../Services/Services';
 import { addToDb } from '../../utilitis/localStorage';
 import Cart from '../Cart/Cart';
+import useCart from '../../hooks/useCart';
 
 const Home = () => {
     const [services, setServices] = useState([])
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useCart()
 
     useEffect(() => {
         fetch('http://localhost:5000/services')
@@ -16,10 +17,9 @@ const Home = () => {
     }, []);
 
     const addToCart = service => {
-        console.log('product added', service)
         const newCart = [...cart, service];
         setCart(newCart);
-        addToDb(service._id);
+        addToDb(service.key);
     }
     return (
         <div className="container">

@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+
 import { getDb } from '../utilitis/localStorage';
 
 const useCart = () => {
@@ -6,8 +7,7 @@ const useCart = () => {
     useEffect(() => {
         const storedDb = getDb();
         const keys = Object.keys(storedDb);
-        const url = 'http://localhost:5000/services/byKeys';
-        fetch(url, {
+        fetch('http://localhost:5000/services/byKeys' , {
             method : 'POST',
             headers : {
                 'content-type' : 'application/json'
@@ -16,12 +16,13 @@ const useCart = () => {
         })
         .then(res => res.json())
         .then(services => {
-            
+            console.log("from response", services);
             if (services.length) {
                 const savedCart = getDb();
+                console.log(savedCart);
                 const storedCart = [];
                 for (const key in savedCart) {
-                    const addedProduct = services.find(product => product.key === key);
+                    const addedProduct = services.find(service => service.key === key);
                     if (addedProduct) {
                         // set quantity
                         const quantity = savedCart[key];

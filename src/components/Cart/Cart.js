@@ -1,8 +1,11 @@
 import React from 'react';
+import './Cart.css';
 import useCart from '../../hooks/useCart';
 
-const Cart = ({cart}) => {
-    console.log(cart);
+const Cart = (props) => {
+    const [cart, setCart] = useCart()
+
+    console.log("from cart", cart)
 
     let totalQuantity = 0;
     let total = 0;
@@ -19,12 +22,13 @@ const Cart = ({cart}) => {
     const grandTotal = total + shipping + tax;
     
     return (
-        <div>
+        <div className="cart-container">
             <h3>This is Cart</h3>
             <p>Added Service : {cart.length}</p>
             <p>Total Price : {grandTotal}</p>
             <p>Tax : {tax.toFixed(2)}</p>
             <p>Total : {(grandTotal + tax).toFixed(2)}</p>
+            <button className="btn btn-success">Show Cart</button>
         </div>
     );
 };

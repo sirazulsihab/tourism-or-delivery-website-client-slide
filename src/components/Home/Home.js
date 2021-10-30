@@ -2,14 +2,25 @@ import React, { useEffect, useState } from 'react';
 import './Home.css';
 import { Carousel, Row } from 'react-bootstrap';
 import Services from '../Services/Services';
+import { addToDb } from '../../utilitis/localStorage';
+import Cart from '../Cart/Cart';
 
 const Home = () => {
     const [services, setServices] = useState([])
+    const [cart, setCart] = useState([])
+
     useEffect(() => {
         fetch('http://localhost:5000/services')
         .then(res => res.json())
         .then(data => setServices(data));
-    }, [])
+    }, []);
+
+    const addToCart = service => {
+        console.log('product added', service)
+        const newCart = [...cart, service];
+        setCart(newCart);
+        addToDb(service._id);
+    }
     return (
         <div className="container">
             <div className="carousel-wrapper">
@@ -55,18 +66,23 @@ const Home = () => {
                 <div className="services-title">
                     <h1>Services</h1>
                 </div>
+                <div className="service-section">
                 <div className="services">
                     {
                         <Row xs={1} md={2} className="g-4">
                         {services.map(service => (
                             <Services
+                            addTocart={addToCart}
                             key={service._id} 
                             service={service}
                             ></Services>
                         ))}
                         </Row>
-                    
                     }
+                </div>
+                <div className="cart">
+                    <Cart cart={cart}></Cart>
+                </div>
                 </div>
             </div>
         </div>

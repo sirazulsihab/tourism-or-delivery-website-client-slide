@@ -3,7 +3,8 @@ import './Services.css';
 import { Card, Col } from 'react-bootstrap';
 
 
-const Services = ({service}) => {
+const Services = (props) => {
+    const {service, addTocart} = props;
     return (
         <div>
             
@@ -18,7 +19,7 @@ const Services = ({service}) => {
                     <Card.Text>
                         Price : $ {service.price}
                     </Card.Text>
-                        <button className="btn btn-success">Buy now</button>
+                        <button onClick={() => addTocart(service)} className="btn btn-success">Buy now</button>
                     </Card.Body>
                 </Card>
                 </Col>

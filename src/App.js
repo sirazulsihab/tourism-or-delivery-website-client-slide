@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React from "react";
 import {
@@ -13,9 +12,14 @@ import Login from './components/Login/Login';
 import AddService from './components/AddService/AddService';
 import Footer from './components/Footer/Footer';
 
+import AuthProvider from './Context/AuthProvider';
+import Review from './components/Review/Review';
+
+
 function App() {
   return (
     <div className="App">
+      <AuthProvider>
       <Router>
         <Header></Header>
         <Switch>
@@ -31,9 +35,14 @@ function App() {
           <Route path="/login">
           <Login></Login>
           </Route>
+          <Route path="/showCart">
+            <Review></Review>
+          </Route>
         </Switch>
         <Footer></Footer>
       </Router>
+      </AuthProvider>
+      
     </div>
   );
 }

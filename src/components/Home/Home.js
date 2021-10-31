@@ -81,7 +81,7 @@ const Home = () => {
                     }
                 </div>
                 <div className="cart">
-                    <Cart cart={cart}></Cart>
+                    <Cart></Cart>
                 </div>
                 </div>
             </div>

@@ -1,21 +1,8 @@
 import React from 'react';
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import useFirebase from '../../hooks/useFirebase';
-
+import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
-    useFirebase();
-    const provider = new GoogleAuthProvider();
-
-    const auth = getAuth();
-    const handleGoogleSignIn = () => {
-        signInWithPopup(auth, provider)
-        .then(result => {
-            const user = result.user;
-            console.log(user)
-        })
-    }
-    
+    const {handleGoogleSignIn} = useAuth()
     return (
         <div>
             <h1>Login Page</h1>

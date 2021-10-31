@@ -24,5 +24,8 @@ const getDb = () => {
     let savedDb = localStorage.getItem('shopping-cart');
     return savedDb ? JSON.parse(savedDb) : {};
 }
+const clearTheCart = () => {
+    localStorage.removeItem('shopping_cart');
+  }
 
-export { addToDb, removeFromDb, getDb };
+export { addToDb, removeFromDb, getDb, clearTheCart };

@@ -1,13 +1,21 @@
 import React from 'react';
 import './Header.css';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 const Header = () => {
+    const {user, logOut} = useAuth()
+    
     return (
         <div className="menu">
             <Link to="/">Home</Link>
             <Link to="/addService">Add a new Service</Link>
-            <Link to="/login">Login</Link>
+            {user.email && <span style={{ color: 'white' }}>Hello {user.displayName} </span>}
+                {
+                    user.email ?
+                        <button onClick={logOut}>log out</button>
+                        :
+                        <NavLink to="/login">Login</NavLink>}
         </div>
     );
 };

@@ -5,6 +5,7 @@ import Services from '../Services/Services';
 import { addToDb } from '../../utilitis/localStorage';
 import Cart from '../Cart/Cart';
 import useCart from '../../hooks/useCart';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const [services, setServices] = useState([])
@@ -81,7 +82,9 @@ const Home = () => {
                     }
                 </div>
                 <div className="cart">
-                    <Cart></Cart>
+                    <Cart>
+                    <Link to="/review"><button className="btn btn-success">Show Cart</button></Link>
+                    </Cart>
                 </div>
                 </div>
             </div>

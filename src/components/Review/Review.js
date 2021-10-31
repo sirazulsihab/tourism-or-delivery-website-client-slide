@@ -1,11 +1,10 @@
 import React from 'react';
 import './Review.css';
-import useCart from '../../hooks/useCart';
 import Cart from '../Cart/Cart';
+import { Link } from 'react-router-dom';
 
 
 const Review = () => {
-    const [cart, setCart] = useCart();
     
     return (
         <div className="review-wrapper">
@@ -13,7 +12,9 @@ const Review = () => {
                 <h1>Review Area</h1>
             </div>
             <div className="cart-area">
-                <Cart></Cart>
+                <Cart>
+                <Link to="/shipping"><button className="btn btn-success">Procced to check out</button></Link>
+                </Cart>
             </div>
         </div>
     );

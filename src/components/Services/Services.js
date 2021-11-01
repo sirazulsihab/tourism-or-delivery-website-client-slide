@@ -11,13 +11,13 @@ const Services = (props) => {
                 <Col>
                 <Card>
                     <Card.Img className="service-img" variant="top" src={service.img} />
-                    <Card.Body className="bg-primary">
-                    <Card.Title> <span className="text-danger font-weight-bold">Tour Package : {service.name}</span> </Card.Title>
+                    <Card.Body className="bg-warning">
+                    <Card.Title> <span className="text-white font-weight-bold">Tour Package : {service.name}</span> </Card.Title>
                     <Card.Text>
                         {service.description}
                     </Card.Text>
                     <Card.Text>
-                        <span className="text-danger">{service.vanue}</span>
+                        <span className="text-danger">Vanue :{service.vanue}</span>
                     </Card.Text>
 
                     <Card.Text>

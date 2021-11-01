@@ -7,7 +7,7 @@ const useCart = () => {
     useEffect(() => {
         const storedDb = getDb();
         const keys = Object.keys(storedDb);
-        fetch('http://localhost:5000/services/byKeys' , {
+        fetch('https://gory-mausoleum-56919.herokuapp.com/services/byKeys' , {
             method : 'POST',
             headers : {
                 'content-type' : 'application/json'

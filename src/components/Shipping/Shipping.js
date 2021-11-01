@@ -14,7 +14,7 @@ const Shipping = () => {
         const savedCart = getDb();
         data.order = savedCart;
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://gory-mausoleum-56919.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -33,7 +33,6 @@ const Shipping = () => {
     return (
 
         <div className="shipping-wrapper">
-            <div className="shipping-area">
                 <h2 className="text-primary py-3">Shipping Form</h2>
             <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
                 <input defaultValue={user.displayName} {...register("name")} />
@@ -50,12 +49,6 @@ const Shipping = () => {
                 <br />
                 <input type="submit" />
             </form>
-            </div>
-            <div className="cart-area">
-                <Cart>
-                <Link to="/shipping"><button className="btn btn-success">Placeed Order</button></Link>
-                </Cart>
-            </div>
             </div>
     );
 };

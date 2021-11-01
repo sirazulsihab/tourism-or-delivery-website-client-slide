@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 const AddService = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        const url = 'http://localhost:5000/services';
+        const url = 'https://gory-mausoleum-56919.herokuapp.com/services';
         fetch(url, {
             method: 'post',
             headers : {

@@ -12,7 +12,7 @@ const Home = () => {
     const [cart, setCart] = useCart()
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://gory-mausoleum-56919.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setServices(data));
     }, []);

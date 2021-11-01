@@ -1,9 +1,3 @@
-.shipping-wrapper{
-    display: grid;
-    grid-template-columns: 5fr 1fr;
-    margin-top: 40px;
-}
-
 .shipping-wrapper form input{
     margin:5px 0;
     width:400px

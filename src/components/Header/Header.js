@@ -9,8 +9,9 @@ const Header = () => {
     return (
         <div className="menu">
             <Link to="/">Home</Link>
-            <Link to="/addService">Add a new Service</Link>
-            {user.email && <span style={{ color: 'white' }}>Hello {user.displayName} </span>}
+            {user.email && <Link to="/addService">Add a new Service</Link>}
+            
+            {user.email && <span style={{ color: 'orange' }}>Hello {user.displayName} </span>}
                 {
                     user.email ?
                         <button onClick={logOut}>log out</button>

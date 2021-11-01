@@ -15,6 +15,9 @@ const Login = () => {
             .then(result => {
                 history.push(redirect_uri);
             })
+            .catch(err => {
+                alert(err.message);
+            })
     }
     return (
         <div>

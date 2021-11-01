@@ -21,6 +21,7 @@ const AddService = () => {
         <div className="add-service-form">
             <h2>Add a New Service</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
+            <input placeholder="Enter Service Key" {...register("key", { required: true })} /> <br />
             <input placeholder="Enter Title" {...register("name", { required: true })} /> <br />
             <input placeholder="Enter vanue" {...register("vanue", { required: true })} /> <br />
             <input placeholder="Enter tour duration" {...register("duration", { required: true })} /> <br />

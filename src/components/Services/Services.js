@@ -17,6 +17,10 @@ const Services = (props) => {
                         {service.description}
                     </Card.Text>
                     <Card.Text>
+                        <span className="text-danger">{service.vanue}</span>
+                    </Card.Text>
+
+                    <Card.Text>
                         Price : $ {service.price}
                     </Card.Text>
                         <button onClick={() => addTocart(service)} className="btn btn-success">Buy now</button>

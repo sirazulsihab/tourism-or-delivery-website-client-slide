@@ -1,7 +1,10 @@
 import React from 'react';
+import './Shipping.css';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import {clearTheCart, getDb } from '../../utilitis/localStorage';
+import Cart from '../Cart/Cart';
 
 
 const Shipping = () => {
@@ -28,24 +31,32 @@ const Shipping = () => {
             })
     };
     return (
-        <div>
-            <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
 
+        <div className="shipping-wrapper">
+            <div className="shipping-area">
+                <h2 className="text-primary py-3">Shipping Form</h2>
+            <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
                 <input defaultValue={user.displayName} {...register("name")} />
-<br />
+                <br />
                 <input defaultValue={user.email} {...register("email", { required: true })} />
                 <br />
                 {errors.email && <span className="error">This field is required</span>}
-                <br />
+                
                 <input placeholder="Address" defaultValue="" {...register("address")} />
                 <br />
                 <input placeholder="City" defaultValue="" {...register("city")} />
                 <br />
                 <input placeholder="phone number" defaultValue="" {...register("phone")} />
-<br />
+                <br />
                 <input type="submit" />
             </form>
-        </div>
+            </div>
+            <div className="cart-area">
+                <Cart>
+                <Link to="/shipping"><button className="btn btn-success">Placeed Order</button></Link>
+                </Cart>
+            </div>
+            </div>
     );
 };
 

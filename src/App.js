@@ -5,16 +5,21 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Header from './components/Header/Header';
 import Home from './components/Home/Home';
-import Login from './components/Login/Login';
-import AddService from './components/AddService/AddService';
-import Footer from './components/Footer/Footer';
-
-import AuthProvider from './Context/AuthProvider';
-import Review from './components/Review/Review';
+import OurServices from './Pages/OurServices/OurServices';
+import AboutUs from './Pages/AboutUs/AboutUs';
+import ContactUs from './Pages/ContactUs/ContactUs';
+import NotFound from './components/NotFound/NotFound';
+import More from './Pages/More/More';
+import SignUp from './Pages/SignUp/SignUp';
+import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
-import Shipping from './components/Shipping/Shipping';
+import Opinion from './Pages/Opinion/Opinion';
+import MyBooking from './Pages/MyOrder/MyBooking';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import Thanks from './Pages/Thanks/Thanks';
+import Form from './Pages/Form/Form';
+import AddedService from './components/AddedService/AddedService';
 
 
 function App() {
@@ -22,29 +27,51 @@ function App() {
     <div className="App">
       <AuthProvider>
       <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
+       <Switch>
+         <Route exact path='/'>
+           <Home></Home>
+         </Route>
+         <Route path='/home'>
+           <Home></Home>
+         </Route>
+         <PrivateRoute path='/tourplace'>
+           <OurServices></OurServices>
+         </PrivateRoute>
+         <PrivateRoute path='/mybooking'>
+            <MyBooking></MyBooking>
+         </PrivateRoute>
+         <Route path='/aboutus'>
+           <AboutUs></AboutUs>
+         </Route>
+         <Route path='/contactus'>
+            <ContactUs></ContactUs>
+         </Route>
+         <Route path='/more/:id'>
+            <More></More>
           </Route>
-          <Route path="/home">
-            <Home></Home>
+          <Route path='/signup'>
+            <SignUp></SignUp>
           </Route>
-          <Route path="/addService">
-            <AddService></AddService>
+          <Route path='/opinion'>
+          <Opinion></Opinion>
           </Route>
-          <Route path="/login">
-          <Login></Login>
-          </Route>
-          <PrivateRoute path="/review">
-            <Review></Review>
+          <PrivateRoute path='/dashboard'>
+            <Dashboard></Dashboard>
           </PrivateRoute>
-          <PrivateRoute path="/shipping">
-            <Shipping></Shipping>
-          </PrivateRoute>
-        </Switch>
-        <Footer></Footer>
-      </Router>
+          <Route path='/thanks'>
+            <Thanks> </Thanks>
+          </Route>
+          <Route path='/form'>
+            <Form></Form>
+          </Route>
+          <Route path='/addedservice'>
+            <AddedService></AddedService>
+          </Route>
+         <Route path="*">
+           <NotFound></NotFound>
+         </Route>
+       </Switch>
+     </Router>
       </AuthProvider>
       
     </div>

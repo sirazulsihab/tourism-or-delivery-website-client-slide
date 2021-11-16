@@ -9,8 +9,7 @@ const Services = () => {
     const [services, setOurServices] = useState([])
     console.log(services)
     useEffect(()=>{
-        // fetch('https://vast-fjord-05847.herokuapp.com/services/')
-        fetch('http://localhost:5000/services')
+        fetch('https://hidden-castle-93174.herokuapp.com/services')
         .then(result=> result.json())
         .then(data=>setOurServices(data))
     },[])

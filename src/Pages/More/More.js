@@ -14,8 +14,7 @@ const More = () => {
     // const {booking} = useAuth();
     const [service, setService] = useState({})
     useEffect(()=>{
-      // fetch(`https://fast-headland-27081.herokuapp.com/services/${id}`)
-      fetch(`http://localhost:5000/services/${id}`)
+      fetch(`https://hidden-castle-93174.herokuapp.com/services/${id}`)
       .then(res =>res.json())
       .then(data => setService(data))
     },[])
